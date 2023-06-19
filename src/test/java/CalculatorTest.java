@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class CalculatorTest {
@@ -14,7 +15,7 @@ class CalculatorTest {
     @Test
     @DisplayName("Addizione riuscita")
     void testAdd() {
-        System.out.println(Calculator.add(100, 200));
+        assertEquals(300, Calculator.add(100, 200));
     }
 
     @Test
@@ -26,7 +27,7 @@ class CalculatorTest {
     @Test
     @DisplayName("Sottrazione riuscita")
     void testSubtract() {
-        System.out.println(Calculator.subtract(200, 100));
+        assertEquals(100, Calculator.subtract(200, 100));
     }
 
     @Test
@@ -38,7 +39,7 @@ class CalculatorTest {
     @Test
     @DisplayName("Divisione riuscita")
     void testDivide() {
-        System.out.println(Calculator.divide(100, 3));
+        assertEquals(20, Calculator.divide(100, 5));
     }
 
     @Test
@@ -50,7 +51,7 @@ class CalculatorTest {
     @Test
     @DisplayName("Moltiplicazione riuscita")
     void testMultiply() {
-        System.out.println(Calculator.multiply(20, 100));
+        assertEquals(50, Calculator.multiply(5, 10));
     }
 
 }
